@@ -1,0 +1,168 @@
+/* BASE SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.938rem;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(233, 47%, 7%);
+}
+
+/* MAIN/LAYOUT SETTINGS*/
+.container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 69.5rem;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: .5rem;
+}
+
+.stats-content {
+    padding: 4.5rem 4.5rem 0 4.5rem;
+    width: 60%;
+}
+
+#desktop-img {
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 0 .5rem .5rem 0;
+}
+
+#mobile-img {
+    display: block;
+    width: 100%;
+}
+
+/* .img-overlay {
+    background-color: hsl(277, 64%, 61%);
+    position: absolute;
+    inset: 0;
+    border-radius: 0 .5rem .5rem 0;
+    height: 50%;
+    z-index: 1;
+    width: 40%;
+    opacity: 0.5;
+    margin-top: 15rem;
+    margin-left: 45rem;
+} */
+
+/* CONTENT SETTINGS*/
+h1 {
+    font-size: 2.3rem;
+}
+
+h1 span {
+    color: hsl(277, 64%, 61%);
+}
+
+.main-paragraph {
+    margin: 1.6rem 0;
+    padding-right: 4rem;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.58rem;
+}
+
+.stats {
+    margin: 4.5rem 0 4rem 0;
+}
+
+.stats ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-right: 4rem;
+    text-transform: uppercase;
+}
+
+.stats ul li .no-cap {
+    text-transform: none;
+}
+
+.stat-quantity {
+    font-size: 1.55rem;
+    font-weight: 700;
+    margin-bottom: .4rem;
+}
+
+.stat-name {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.85rem;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+/*MOBILE SETTINGS*/
+@media screen and (max-width: 47rem) {
+    #desktop-img {
+        display: none;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        max-width: 87%;
+    }
+
+    .stats-content {
+        padding: 2rem;
+        padding-top: 2.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .main-paragraph {
+        padding: 0;
+        margin: 1rem 0;
+    }
+
+    .stats {
+        margin: 2.5rem 0 0 0;
+    }
+
+    .stats ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .stats ul li {
+        margin: 1rem;
+    }
+
+    .stats ul li:last-of-type {
+        margin-bottom: .5rem;
+    }
+
+    .stat-quantity {
+        font-size: 1.5rem;
+    }
+
+    .stat-name {
+        font-size: .785rem;
+    }
+}
+
+/*DESKTOP SETTINGS*/
+@media screen and (min-width: 47rem) {
+    #mobile-img {
+        display: none;
+    }
+    
+}
+
+/*RESPONSIVE SCREAN SETTINGS*/
+@media screen and (max-width: 72.813rem) {
+    .container {
+        width: 95%;
+        overflow: hidden;
+    }
+}
